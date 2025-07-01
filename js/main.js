@@ -2,9 +2,7 @@ window.onload = () => {
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
   const resultEl = document.getElementById('result');
-  // const predictBtn = document.getElementById('predictBtn');
   const predictBtn = document.getElementById('predictBtn');
-  predictBtn.onclick = predict;
   const clearBtn = document.getElementById('clearBtn');
   
   let isDrawing = false;
@@ -88,9 +86,10 @@ window.onload = () => {
   
     resultEl.textContent = `Résultat : ${maxIdx}`;
   }
+  predictBtn.onclick = predict;
+
 };  
 
   
 
-predictBtn.onclick = predict;
 
