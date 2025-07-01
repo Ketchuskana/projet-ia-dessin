@@ -64,7 +64,7 @@ async function predict() {
 
   // Créer session ONNX
   const session = await ort.InferenceSession.create(
-    './model/mnist_model.onnx',
+    '/projet-ia-dessin/model/mnist_model.onnx',
     { executionProviders: ['wasm'] } 
   );
   const tensor = new ort.Tensor('float32', input, [1, 1, 28, 28]);
