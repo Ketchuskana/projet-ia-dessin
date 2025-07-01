@@ -1,0 +1,8 @@
+#output {
+  border: 1px solid #ccc;
+  padding: 10px;
+  white-space: pre-wrap; 
+  max-height: 300px;
+  overflow: auto;
+  background-color: #f9f9f9;
+}
