@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MNIST ONNX</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <h1>Page test</h1>
-    <button id="runInference">Lancer l'inférence</button>
-    <div>
-      <img id="mnist-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAwElEQVR4nGNgGDaAEUKFpD77sfTFHeyS9xQYGBg+X4UKPuk6A6ZZINxU/Wtahg4Wj2UZGP68lmR4dAZZJxgIGp4xZWD4ceu6UM40Bhwg+O9FIVxyYi//B0OZTBiS2aLvb+LSaP3znx0uOYbWf7tZcclxnv1hhVNj3b9tOOW8f3+wxCUnfPffMlxyzKf/3VbGJan2758vLjn5B/+KkcMaBbT++2eCS872E7okUtja8DDc/YIiCY1sCLjo/A6XsZgAAGkRPJA1cOMmAAAAAElFTkSuQmCC" alt="MNIST test image" />
-    </div>
-    <pre id="output"></pre>
-    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Démo MNIST Dessin + ONNX Runtime</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 2rem; }
+    canvas { border: 2px solid #444; background: black; cursor: crosshair; }
+    #result { font-size: 2rem; margin-top: 1rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; font-size: 1rem; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <h1>Dessine un chiffre (0-9)</h1>
+  <canvas id="canvas" width="280" height="280"></canvas>
+  <br />
+  <button id="predictBtn">Prédire</button>
+  <div id="result">Résultat : ?</div>
+  <button id="clearBtn">Effacer</button>
+</body>
 </html>
